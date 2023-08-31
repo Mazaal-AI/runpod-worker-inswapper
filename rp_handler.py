@@ -11,8 +11,12 @@ from runpod.serverless.utils.rp_validator import validate
 from runpod.serverless.modules.rp_logger import RunPodLogger
 from typing import List, Union
 from PIL import Image
-from restoration import *
+
 from schemas.input import INPUT_SCHEMA
+
+import sys
+sys.path.append('./CodeFormer/CodeFormer')
+from restoration import *
 
 TMP_PATH = '/tmp/inswapper'
 script_dir = os.path.dirname(os.path.abspath(__file__))
